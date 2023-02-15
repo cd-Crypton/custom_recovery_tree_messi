@@ -81,7 +81,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-TARGET_NO_BOOTLOADER := true
+TARGET_NO_BOOTLOADER := false
 TARGET_USES_UEFI := true
 TARGET_USES_MKE2FS := true
 RECOVERY_SDCARD_ON_DATA := true
@@ -102,6 +102,8 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libdmabufheap \
     libhidlmemory \
     libion \
+    libspl \
+    libops \
     libnetutils \
     libxml2
 
@@ -112,6 +114,8 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libdmabufheap.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libhidlmemory.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libspl.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libops.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libnetutils.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
 
