@@ -11,6 +11,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=ext4 \
+    POSTINSTALL_OPTIONAL_vendor=true
+
 # Update Engine
 PRODUCT_PACKAGES += \
   update_engine_sideload
@@ -53,6 +59,7 @@ AB_OTA_PARTITIONS += \
     product \
     odm \
     boot \
+    recovery \
     dtbo \
     vbmeta
 
@@ -64,11 +71,15 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 # API/SDK Version
+BOARD_SYSTEMSDK_VERSIONS := 31
 PRODUCT_TARGET_VNDK_VERSION := 32
 PRODUCT_SHIPPING_API_LEVEL := 30
 BOARD_SHIPPING_API_LEVEL := 30
 BOARD_API_LEVEL := 30
 SHIPPING_API_LEVEL := 30
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
