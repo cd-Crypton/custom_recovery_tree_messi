@@ -5,7 +5,8 @@
 | CPU                     | Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver)  |
 | GPU                     | Adreno 610                                             |
 | Internal                | 64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM                 |
-
+| Model                   | RMX3521 |
+| Codename                | Messi |
 ## Release Notes
 * To be updated.
 
