@@ -8,11 +8,14 @@
 | Model                   | RMX3521 |
 | Codename                | Messi |
 ## Release Notes
-* To be updated.
+* Device Tree stuck in TWRP splash screen, due to decryption failure.
+* Disabling crypto-related flags will help booting to TWRP, for the sake of testing other feature.
 
-## Working Features
-* To be updated.
+## Working Features (...only if crypto is disabled.)
+* External Storage
+* USB Storage
+* Vibration/Haptics
 
 ## Issues
-* To be updated.
+* Internal Storage not mounting due to encryption, hence stuck in TWRP spash screen.
 
