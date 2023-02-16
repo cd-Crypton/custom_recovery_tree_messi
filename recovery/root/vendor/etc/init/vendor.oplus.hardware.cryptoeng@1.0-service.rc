@@ -18,11 +18,11 @@
 ## *************************************************************/
 
 on post-fs-data
-    mkdir /data/vendor_de 0770 root root
-    mkdir /data/vendor_de/0 0770 root root
-    mkdir /data/vendor_de/0/cryptoeng 0770 root root
+    mkdir /data/vendor_de 0770 system system
+    mkdir /data/vendor_de/0 0770 system system
+    mkdir /data/vendor_de/0/cryptoeng 0770 system system
 
-service cryptoeng-1-0 /system/bin/vendor.oplus.hardware.cryptoeng@1.0-service
+service hal_cryptoeng_oplus /system/bin/vendor.oplus.hardware.cryptoeng@1.0-service
     class hal
     user root
     group root input sdcard_rw sdcard_r
@@ -30,4 +30,4 @@ service cryptoeng-1-0 /system/bin/vendor.oplus.hardware.cryptoeng@1.0-service
     seclabel u:r:recovery:s0
     
 on property:ro.crypto.state=encrypted && property:hwservicemanager.ready=true
-    start cryptoeng-1-0
+    start hal_cryptoeng_oplus

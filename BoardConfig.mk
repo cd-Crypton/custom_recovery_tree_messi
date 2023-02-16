@@ -2,7 +2,7 @@
 # Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
 # SPDX-License-Identifier: Apache-2.0
 
-DEVICE_PATH := device/realme/messi
+DEVICE_PATH := device/$(PRODUCT_MANUFACTURER)/$(PRODUCT_RELEASE_NAME)
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -13,7 +13,7 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 := 
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := generic
+TARGET_CPU_VARIANT_RUNTIME := $(TARGET_CPU_VARIANT)
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -25,7 +25,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a9
 # Kernel Source
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_CONFIG := messi_defconfig
-TARGET_KERNEL_SOURCE := kernel/realme/messi
+TARGET_KERNEL_SOURCE := kernel/$(PRODUCT_MANUFACTURER)/$(PRODUCT_RELEASE_NAME)
 LC_ALL="C"
 
 # Kernel - Prebuilt

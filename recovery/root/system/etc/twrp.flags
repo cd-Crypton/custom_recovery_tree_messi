@@ -2,8 +2,8 @@
 /cache              ext4      /dev/block/by-name/oplusreserve2               flags=display=cache
 
 # External Partitions
-/external_sd        vfat      /dev/block/mmcblk0p1  /dev/block/mmcblk0                         flags=display=external_sd
-/usb_otg            vfat      /dev/block/sdg1        /dev/block/sdg                        flags=display=usb_otg
+/external_sd        vfat      /dev/block/mmcblk0p1  /dev/block/mmcblk0                         flags=display="External Storage";storage;wipeingui;removable
+/usb_otg            vfat      /dev/block/sdg1        /dev/block/sdg                        flags=display="USB Storage";storage;wipeingui;removable
 
 # Other Partitions
 /boot               emmc      /dev/block/bootdevice/by-name/boot             flags=display=boot;slotselect

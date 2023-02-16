@@ -2,7 +2,7 @@
 # Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
 # SPDX-License-Identifier: Apache-2.0
 
-LOCAL_PATH := device/realme/RMX3521
+LOCAL_PATH := device/realme/messi
 
 # A/B Post-Install
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -71,16 +71,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 # API/SDK Version
-BOARD_SYSTEMSDK_VERSIONS := 30
-PRODUCT_TARGET_VNDK_VERSION := 30
+BOARD_SYSTEMSDK_VERSIONS := 31
+PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_SHIPPING_API_LEVEL := 30
 BOARD_SHIPPING_API_LEVEL := 30
 BOARD_API_LEVEL := 30
 SHIPPING_API_LEVEL := 30
-
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Virtual A/B
-ENABLE_VIRTUAL_AB := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)

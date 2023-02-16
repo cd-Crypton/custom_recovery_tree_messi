@@ -5,6 +5,9 @@ import /init.recovery.qcom_decrypt.rc
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
+    start overrideprops
+    setprop prepdecrypt.setpatch true
+    setprop prepdecrypt.loglevel 2
 
 on post-fs
     start boot-hal-1-1
@@ -19,3 +22,10 @@ on property:ro.boot.usbcontroller=*
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+service sdk-resetprops /system/bin/sdk-resetprops.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
