@@ -1,5 +1,5 @@
 # Custom Recovery | Device Tree
-
+![Realme 9 4G](https://github.com/cd-Spidey/Random/blob/main/screenshots/realme-9-4g-transparent..png)
 | Device                  | Realme 9 4G                                          |
 | ----------------------- | ---------------------------------------------------------|
 | SoC                     | Qualcomm SM6225 Snapdragon 680 4G (6 nm)                      |      
