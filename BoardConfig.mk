@@ -24,7 +24,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a9
 
 # Kernel Source
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-TARGET_KERNEL_CONFIG := messi_defconfig
+TARGET_KERNEL_CONFIG := $(PRODUCT_RELEASE_NAME)_defconfig
 TARGET_KERNEL_SOURCE := kernel/$(PRODUCT_MANUFACTURER)/$(PRODUCT_RELEASE_NAME)
 LC_ALL="C"
 
@@ -154,7 +154,11 @@ TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 900
 TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_FUSE_EXFAT := true
-TW_NO_FLASH_CURRENT_TWRP := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_APEX := true
+TW_NO_FLASH_CURRENT_TWRP := true # For A/B devices that has dedicated recovery, removing that option in Advance.
+
+# Maintainer/Version
 TW_DEVICE_VERSION := Crypton
 
 # Debugging Configs
