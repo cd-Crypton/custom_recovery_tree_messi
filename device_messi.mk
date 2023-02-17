@@ -60,8 +60,10 @@ AB_OTA_PARTITIONS += \
     odm \
     boot \
     recovery \
-    dtbo \
-    vbmeta
+    vbmeta \
+    vbmeta_vendor \
+    vbmeta_system \
+    dtbo
 
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := RMX3521,RE54E2L1,ossi,qssi
