@@ -10,17 +10,36 @@
 /vbmeta_vendor         	emmc    /dev/block/bootdevice/by-name/vbmeta_vendor                        flags=display="VBMeta_Vendor";slotselect;backup=1;flashimg=1
 
 # Other Partitions
-/tz                 emmc      /dev/block/bootdevice/by-name/tz
-/tzbak              emmc      /dev/block/bootdevice/by-name/tzbak
 /apdp               emmc      /dev/block/bootdevice/by-name/apdp
 /devinfo            emmc      /dev/block/bootdevice/by-name/devinfo
+/aboot              emmc      /dev/block/bootdevice/by-name/aboot
+/sbl1               emmc      /dev/block/bootdevice/by-name/sbl1
+/rpm                emmc      /dev/block/bootdevice/by-name/rpm
+/tz                 emmc      /dev/block/bootdevice/by-name/tz
+/modemst1           emmc      /dev/block/bootdevice/by-name/modem_st1
+/modemst2           emmc      /dev/block/bootdevice/by-name/modem_st2
+/static_nv_bk       emmc      /dev/block/bootdevice/by-name/oppostanvbk
+/oppodycnvbk        emmc      /dev/block/bootdevice/by-name/oppodycnvbk
+/splash             emmc      /dev/block/bootdevice/by-name/splash                    flags=display="Splash";slotselect;flashimg=1
+/reserve4           emmc      /dev/block/bootdevice/by-name/reserve4
+/dsp                emmc      /dev/block/bootdevice/by-name/dsp
+/DRIVER             emmc      /dev/block/bootdevice/by-name/DRIVER
+/devcfg             emmc      /dev/block/bootdevice/by-name/devcfg
+/mdtp               emmc      /dev/block/bootdevice/by-name/mdtp
+/cmnlib             emmc      /dev/block/bootdevice/by-name/cmnlib
+/keymaster          emmc      /dev/block/bootdevice/by-name/keymaster
+/apdp               emmc      /dev/block/bootdevice/by-name/apdp
+/devinfo            emmc      /dev/block/bootdevice/by-name/devinfo
+/opporeserve        ext4      /dev/block/bootdevice/by-name/opporeserve
+/abl                emmc      /dev/block/bootdevice/by-name/abl
+/xbl                emmc      /dev/block/bootdevice/by-name/xbl
 
 # Mount Vendor Partitions
 /mnt/vendor/persist         ext4      /dev/block/bootdevice/by-name/persist          flags=display="Persist";backup=1;flashimg=1
 /mnt/vendor/oplusreserve    ext4      /dev/block/by-name/oplusreserve2
-/vendor/bt_firmware         vfat      /dev/block/bootdevice/by-name/bluetooth        flags=display="Bluetooth";backup=1;flashimg=1
-/vendor/dsp                 ext4      /dev/block/bootdevice/by-name/dsp
+/vendor/bt_firmware         vfat      /dev/block/bootdevice/by-name/bluetooth        flags=slotselect;backup=1
+/vendor/dsp                 ext4      /dev/block/bootdevice/by-name/dsp              flags=slotselect;backup=1
 
 # External Partitions
-/external_sd        vfat      /dev/block/mmcblk0p1  /dev/block/mmcblk0                         flags=display="External Storage";storage;wipeingui;removable
-/usb_otg            vfat      /dev/block/sdg1        /dev/block/sdg                        flags=display="USB Storage";storage;wipeingui;removable
+/external_sd        vfat      /dev/block/mmcblk0p1    /dev/block/mmcblk0            flags=display="External Storage";storage;wipeingui;removable
+/usb_otg            vfat      /dev/block/sdg1         /dev/block/sdg                flags=display="USB Storage";storage;wipeingui;removable
