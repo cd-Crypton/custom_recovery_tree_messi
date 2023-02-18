@@ -92,7 +92,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/properties/system.prop
 TARGET_VENDOR_PROP := $(DEVICE_PATH)/properties/vendor.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
-TW_OVERRIDE_SYSTEM_PROPS := "ro.vndk.version;ro.build.version.sdk;ro.vendor.build.version.sdk;ro.system.build.version.sdk"
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk;ro.system.build.version.sdk"
 
 # Recovery Modules
 TARGET_RECOVERY_DEVICE_MODULES += \
