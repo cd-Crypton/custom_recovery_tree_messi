@@ -68,6 +68,10 @@ firmware_directories /odm/etc/wifi/ /mnt/vendor/persist/ /vendor/firmware_mnt/im
 /dev/hgsl                 0666   system     system
 /dev/iio:device*          0664   system     system
 
+/dev/bus/usb/*            0660   root       usb
+/dev/mtp_usb              0660   root       mtp
+/dev/usb_accessory        0660   root       usb
+
 #permissions for UFS RPMB BSG device node
 /dev/0:0:0:49476          0600   system     system
 
