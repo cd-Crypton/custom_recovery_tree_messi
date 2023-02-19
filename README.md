@@ -10,7 +10,9 @@
 | Codename                | Messi |
 ## Release Notes
 * Decryption is working, but aren't tested in GSI.
-* Backup and Restore aren't fully tested yet, so backup/restore only partitions that are not logical partitions to avoid possible conflict.
+* Backup is working fine with all the available partition options.
+* Restoring a full backup weren't fully tested yet. So restore only partitions that are not logical partitions to avoid possible conflict.
+* Do not flash OTA yet, it is risky and not fully tested.
 
 ## Working Features
 * Internal Storage (Decryption works fine.)
@@ -19,8 +21,10 @@
 * Flashing archive files (Magisk, Flashable Recovery, etc.)
 * ADB and Fastboot Command
 * FastbootD (Userspace; Super Partition)
+* MTP Enable/Disable
 * Backup and Restore (...read the Release Notes above.)
 
 ## Issues and Bugs
-* MTP aren't working.
+* ADB Sideload seems a lil' bit stable. I am looking into it.
+* Flashing OTA, which I think a bit harder to fix.
 * Tell me more...
