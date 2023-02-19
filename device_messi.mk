@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     check_f2fs
 
 # OTA Script
-PRODUCT_PACKAGES + \
+PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Userdata Checkpoint
@@ -89,4 +89,4 @@ SHIPPING_API_LEVEL := 31
 
 # OEM otacerts
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(COMMON_PATH)/security/local_OTA
+    $(LOCAL_PATH)/security/local_OTA
