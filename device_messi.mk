@@ -19,13 +19,22 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Update Engine
 PRODUCT_PACKAGES += \
-  update_engine_sideload
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
 
 # F2FS Utilities
 PRODUCT_PACKAGES += \
     sg_write_buffer \
     f2fs_io \
     check_f2fs
+
+# OTA Script
+PRODUCT_PACKAGES + \
+    otapreopt_script
 
 # Userdata Checkpoint
 PRODUCT_PACKAGES += \
@@ -77,3 +86,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 BOARD_SHIPPING_API_LEVEL := 31
 BOARD_API_LEVEL := 31
 SHIPPING_API_LEVEL := 31
+
+# OEM otacerts
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    $(COMMON_PATH)/security/local_OTA
