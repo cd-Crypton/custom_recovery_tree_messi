@@ -5,9 +5,9 @@
 | SoC                     | Qualcomm SM6225 Snapdragon 680 4G (6 nm)                      |      
 | CPU                     | Octa-core (4x2.4 GHz Kryo 265 Gold & 4x1.9 GHz Kryo 265 Silver)  |
 | GPU                     | Adreno 610                                             |
-| Internal                | 64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM                 |
+| Internal                | 128GB Storage, 6GB / 8GB RAM                 |
 | Model                   | RMX3521 (RE54E2L1) |
-| Codename                | Messi |
+| Codename                | Messi (...name from diracmobile.config.) |
 ## Release Notes
 * Decryption is working, but aren't tested in GSI.
 * Backup is working fine with all the available partition options.
@@ -23,8 +23,8 @@
 * FastbootD (Userspace; Super Partition)
 * MTP Enable/Disable
 * Backup and Restore (...read the Release Notes above.)
+* ADB Sideload
 
 ## Issues and Bugs
-* ADB Sideload seems a lil' bit stable. I am looking into it.
 * Flashing OTA, which I think a bit harder to fix.
 * Tell me more...
