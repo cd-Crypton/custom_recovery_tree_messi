@@ -61,18 +61,7 @@ PRODUCT_PACKAGES += \
 
 # A/B Device
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    system \
-    system_ext \
-    vendor \
-    product \
-    odm \
-    boot \
-    recovery \
-    vbmeta \
-    vbmeta_vendor \
-    vbmeta_system \
-    dtbo
+AB_OTA_PARTITIONS ?= system system_ext vendor product odm boot recovery vbmeta vbmeta_vendor vbmeta_system dtbo
 
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := RMX3521,RE54E2L1,ossi,qssi
