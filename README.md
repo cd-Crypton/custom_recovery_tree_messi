@@ -1,4 +1,5 @@
 # Custom Recovery | Device Tree
+ 
 ![Realme 9 4G](https://github.com/cd-Spidey/Random/blob/main/screenshots/realme-9-4g-transparent..png)
 | Device                  | Realme 9 4G                                          |
 | ----------------------- | ---------------------------------------------------------|
@@ -7,24 +8,7 @@
 | GPU                     | Adreno 610                                             |
 | Internal                | 128GB Storage, 6GB / 8GB RAM                 |
 | Model                   | RMX3521 (RE54E2L1) |
-| Codename                | Messi (...name from diracmobile.config.) |
-## Release Notes
-* Decryption is working, but aren't tested in GSI.
-* Backup is working fine with all the available partition options.
-* Restoring a full backup weren't fully tested yet. So restore only partitions that are not logical partitions to avoid possible conflict.
-* Do not flash OTA yet, it is risky and not fully tested.
+| Codename                | Messi  |
 
-## Working Features
-* Internal Storage (Decryption works fine.)
-* External Storage (Micro SD Card and USB-OTG)
-* Vibration/Haptics
-* Flashing archive files (Magisk, Flashable Recovery, etc.)
-* ADB and Fastboot Command
-* FastbootD (Userspace; Super Partition)
-* MTP Enable/Disable
-* Backup and Restore (...read the Release Notes above.)
-* ADB Sideload
-
-## Issues and Bugs
-* Flashing OTA, which I think a bit harder to fix.
-* Tell me more...
+## Notes
+Release Notes, Working Features, Bugs and Issues, and other stuff will be in the download page. Visit [custom-recovery-releases](https://github.com/cd-Crypton/custom-recovery-releases) and search for Realme 9 4G or just "messi".
